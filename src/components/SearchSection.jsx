@@ -13,7 +13,7 @@ const getData=(data,property)=>{
   let value=data.map((element)=>{
    return element[property];
   })
-value=["All",...new Set(value)];
+value=["all",...new Set(value)];
 return value;
 }
 const categoryData=getData(all_products,"category")

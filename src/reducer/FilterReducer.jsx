@@ -36,12 +36,16 @@
                 })
             }
 
-             if (category !== "all") {
-                    tempFilterProduct = tempFilterProduct.filter(
-                      (curElem) => curElem.category.toLowerCase() === category.toLowerCase()
-                    );
-                  }
-        
+            if (category !== "all") {
+              tempFilterProduct = tempFilterProduct.filter(
+                (curElem) => curElem.category === category
+              );
+            }
+             
+              // if(category.toLowerCase()=="all")
+              // {
+              //   tempFilterProduct=[...all_products]
+              // }
             return{
                   ...state,
                   filter_products:tempFilterProduct

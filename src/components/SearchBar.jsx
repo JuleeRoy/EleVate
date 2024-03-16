@@ -10,7 +10,8 @@ const SearchBar = ({ categoryData }) => {
   } = useFilterContext();
 
   const handleCategoryClick = (selectedCategory) => {
-    updateFilterValue({ target: { name: "category", value: selectedCategory } });
+    console.log(selectedCategory)
+    updateFilterValue({ target: { name: "category", value: selectedCategory.toLowerCase() } });
   };
 
   return (
@@ -37,6 +38,7 @@ const SearchBar = ({ categoryData }) => {
                 className={val === category ? "active" : ""}
                 onClick={() => handleCategoryClick(val)}
                 id="categroy_btn"
+                href="#allProduct"
               >
                 {val}
               </button>
