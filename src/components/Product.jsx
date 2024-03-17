@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Product = ({ id, title, image ,category,price }) => {
   const words = title.split(" "); // Split the string into an array of words
   const lastTwoWords = words.slice(-3).join(" "); // Get the last two words and join them back into a string
-  console.log(lastTwoWords);
+  // console.log(lastTwoWords);
   return (
     <NavLink
       className="col-md-3 border"

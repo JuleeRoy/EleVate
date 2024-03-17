@@ -271,6 +271,12 @@ border: none;
 }
 
 /* custom Loader */
+
+/* dropdown */
+#sort-price a:hover{
+  color: white;
+  background-color: #f26522;
+}
 /* responsive */
 
 @media (min-width: 992px) and (max-width: 1199px) {

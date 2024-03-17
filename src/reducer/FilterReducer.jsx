@@ -11,7 +11,45 @@
                 all_products:[...action.payload],
                 
             }
-           
+            case "GET_SORT_VALUE":
+            console.log(action.payload)
+          return {
+            ...state,
+            sorting_value: action.payload,
+          }; 
+          case "SORTING_PRODUCTS":
+          let newSortData;
+          // let tempSortProduct = [...action.payload];
+    
+          const { filter_products, sorting_value } = state;
+          let tempSortProduct = [...filter_products];
+
+          const sortingProducts = (a, b) => {
+            if (sorting_value === "lowest") {
+              return a.price - b.price;
+            }
+    
+            if (sorting_value === "highest") {
+              return b.price - a.price;
+            }
+    
+            if (sorting_value === "a-z") {
+              return a.category.localeCompare(b.category);
+            }
+    
+            if (sorting_value === "z-a") {
+              return b.category.localeCompare(a.category);
+            }
+          };
+    
+          newSortData = tempSortProduct.sort(sortingProducts);
+    
+          return {
+            ...state,
+            filter_products: newSortData,
+          };
+
+          
            
          case "UPDATE_FILTERS_VALUE":
                 const { name, value } = action.payload;
