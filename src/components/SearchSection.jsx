@@ -17,7 +17,7 @@ value=["all",...new Set(value)];
 return value;
 }
 const categoryData=getData(all_products,"category")
-console.log(categoryData)
+// console.log(categoryData)
   return (
     <div className="container mt-3">
         <div className="row flex-wrap-reverse">

@@ -7,7 +7,7 @@ const AllProduct = () => {
     
     
  const{filter_products,isLoading} =useFilterContext();
-  console.log(filter_products ,isLoading);
+//   console.log(filter_products ,isLoading);
    return(
     <div className="container-fluid mt-3" id='allProduct'>
          <div className="container">

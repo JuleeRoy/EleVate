@@ -28,11 +28,11 @@
             let{all_products}=state;
             let tempFilterProduct=[...all_products];
             const{text,category}=state.filters;
-             console.log(category)
+             console.log(text)
             if(text)
             {
                 tempFilterProduct=tempFilterProduct.filter((curElem)=>{
-                    return curElem.title.toLowerCase().includes(text)
+                    return curElem.title.toLowerCase().includes(text.toLowerCase())
                 })
             }
 

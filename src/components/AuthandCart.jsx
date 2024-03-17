@@ -45,15 +45,16 @@ const AuthandCart = ({categoryData}) => {
           </button>
           <ul className="dropdown-menu p-1">
             {categoryData.map((val, index) => (
-              <button
-                key={index}
-                type="button"
-                className={val === category ? "active" : ""}
-                onClick={() => handleCategoryClick(val)}
-                id="categroy_btn"
-              >
-                {val}
-              </button>
+               <button
+               key={index}
+               type="button"
+               className={val === category ? "active" : ""}
+               onClick={() => handleCategoryClick(val)}
+               id="categroy_btn"
+             >
+       <a href="#allProduct" className="text-dark">{val}</a>
+
+             </button>
             ))}
           </ul>
         </div>

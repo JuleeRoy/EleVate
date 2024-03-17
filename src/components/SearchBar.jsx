@@ -10,7 +10,7 @@ const SearchBar = ({ categoryData }) => {
   } = useFilterContext();
 
   const handleCategoryClick = (selectedCategory) => {
-    console.log(selectedCategory)
+    // console.log(selectedCategory)
     updateFilterValue({ target: { name: "category", value: selectedCategory.toLowerCase() } });
   };
 
@@ -28,6 +28,7 @@ const SearchBar = ({ categoryData }) => {
             aria-expanded="false"
             style={{width:"200px"}}
           >
+           
             {category || "All Category"}
           </button>
           <ul className="dropdown-menu p-1">
@@ -38,9 +39,9 @@ const SearchBar = ({ categoryData }) => {
                 className={val === category ? "active" : ""}
                 onClick={() => handleCategoryClick(val)}
                 id="categroy_btn"
-                href="#allProduct"
               >
-                {val}
+        <a href="#allProduct" className="text-dark">{val}</a>
+
               </button>
             ))}
           </ul>
@@ -49,6 +50,7 @@ const SearchBar = ({ categoryData }) => {
 
       <div className="col-10 col-lg-7">
         <div className="input-group">
+
           <input
             type="text"
             className="form-control"
