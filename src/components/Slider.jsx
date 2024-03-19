@@ -3,8 +3,8 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 const Slider = () => {
   return (
-    <div className=''>
-  <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+    <div className='' >
+  <div id="carouselExampleInterval" className="carousel slide " data-bs-ride="carousel" style={{height:""}}>
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="10000">
        <h2 className='text-center text-light mt-5 '>

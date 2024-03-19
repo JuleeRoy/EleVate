@@ -7,7 +7,7 @@ const Header = () => {
        <div className="row">
           <div className="col-sm-12">
              <div className="custom_menu">
-                <ul>
+                <ul className=''>
                    <li><a href="#">Best Sellers</a></li>
                    <li><a href="#">Gift Ideas</a></li>
                    <li><a href="#">New Releases</a></li>
