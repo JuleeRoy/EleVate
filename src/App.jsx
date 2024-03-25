@@ -6,6 +6,7 @@ import { Loader } from "./components";
 import SingleProductPage from "./pages/SingleProductPage";
 import Footer from "./components/Footer";
 import CustomLoader from "./components/CustomLoader";
+import Cart from "./components/Cart";
 
 const App = () => {
   const allData = useProductContext();
@@ -23,6 +24,7 @@ console.log()
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/single/:id" element={<SingleProductPage />} />
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
         <CustomLoader/>
         <Footer />

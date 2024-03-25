@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
-
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -18,11 +18,11 @@ const Footer = () => {
              </div>
           <div className='mt-3'>
           <ul className=' d-md-flex gap-2 justify-content-center text-center'>
-                   <li><a href="#" className='text-light'>Best Sellers</a></li>
-                   <li><a href="#" className='text-light'>Gift Ideas</a></li>
-                   <li><a href="#"className='text-light'>New Releases</a></li>
-                   <li><a href="#"className='text-light'>Today's Deals</a></li>
-                   <li><a href="#" className='text-light'>Customer Service</a></li>
+                   <li><Link  className='text-light'>Best Sellers</Link></li>
+                   <li><Link  className='text-light'>Gift Ideas</Link></li>
+                   <li><Link className='text-light'>New Releases</Link></li>
+                   <li><Link className='text-light'>Today's Deals</Link></li>
+                   <li><Link className='text-light'>Customer Service</Link></li>
                 </ul>
           </div>
           <div className="col-12 m-auto text-center pb-2" style={{width:"50%"}}>

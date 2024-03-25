@@ -25,7 +25,7 @@ const ProductPagination = ({ filter_products }) => {
     <div className='container-fluid mt-3'>
       {/* Render items for the current page */}
       {currentItems.length > 0 ? (
-        <div className="row gap-3 justify-content-center">
+        <div className="row  justify-content-between">
           {currentItems.map((item, index) => (
             <Product key={item.id} {...item} />
           ))}
